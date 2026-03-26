@@ -1,0 +1,33 @@
+/dts-v1/;  // Use Device Tree Source write Image Tree Source
+/ {
+    description = "U-boot FIT Image for Orange Pi RV2"; // Human-readable description of this FIT image 
+    #address-cells = <2>;                               // Addresses are 2 cells ( 1 cell = 32-bit )
+    images {                                            // Define all payload "images" packed into the FIT container
+        kernel {                                        // The kernel payload node
+            description = "Kernel Image";               // Human-readable description of the kernel image
+            data = /incbin/("kernel.bin");              // Include the raw binary kernel file into the FIT
+            type = "kernel";                            // Tell U-Boot this blob is a kernel image
+            arch = "riscv";                             // Target architecture is RISC-V
+            os = "linux";                               // OS type field, treat it as a Linux-type kernel
+            compression = "none";                       // Data is not compressed
+            load = <0x0 0x00200000>;                    // Where U-Boot should copy kernel.bin into RAM
+            entry = <0x0 0x00200000>;                   // Where U-Boot should jump to start execution
+        };
+        fdt {                                           // The device tree payload node
+            description = "Flat Device Tree";           // Human-readable description of the DTB
+            data = /incbin/("x1_orangepi-rv2.dtb");     // Include the DTB file into the FIT
+            type = "flat_dt";                           // This blob is a flattened device tree
+            arch = "riscv";                             // Architecture for this DTB
+            compression = "none";                       // DTB is not compressed
+            load = <0x0 0x31000000>;                    // Where U-Boot should copy the DTB into RAM
+        };
+    };
+    configurations {                                    // Define boot configurations (select which kernel/fdt to use)
+        default = "config-1";                           // Default configuration chosen if none specified
+        config-1 {                                      // Boot configuration
+            description = "NYCU OSC RISC-V KERNEL";     // Human-readable description of this configuration
+            kernel = "kernel";                          // Use the "kernel" image node above
+            fdt = "fdt";                                // Use the "fdt" image node above
+        };
+    };
+};
