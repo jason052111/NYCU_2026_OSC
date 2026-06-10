@@ -5,10 +5,15 @@ Lab instruction : https://people.cs.nycu.edu.tw/~ttyeh/course/2026_Spring/IOC522
 Exercise instruction : https://nycu-caslab.github.io/OSC2026/index.html
 
 Lab0 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/ryr70lpXWx
+
 Lab1 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/r1O3PmIYWx
+
 Lab2 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/rka1Nr_5Wx
+
 ex11 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/HkIXlFrtWx
+
 ex12 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/SJ_PYbUF-e
+
 ex21 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/SJrxshCtWe
 ex22 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/Hy0U_md9Wg
 ex41 : https://hackmd.io/@jMR7GJ6iQjCkyhQxYcYEKA/BkC1nQZTbe
